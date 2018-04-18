@@ -12,4 +12,4 @@ Wanneer je de zone volledig ontdekt hebt krijgt deze een vinkje.
 
 Als alle zones ontdekt werden, sluit de applicatie af met te vermelden hoe lang je erover deed om de kinderbibliotheek te ontdekken. 
 
-<img src=“../images/screenshot.png alt=“screenshot”></img>
+<img src=“images/screenshot.png alt=“screenshot”></img>
