@@ -252,12 +252,12 @@ public class MainActivity extends AppCompatActivity implements BeaconConsumer, V
 
     private void setUpShowCase() {
         TextPaint title = new TextPaint(Paint.ANTI_ALIAS_FLAG);
-        title.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/orange juice 2.0.ttf"));
+        title.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/Oswald-Regular.ttf"));
         title.setTextSize(150);
         title.setColor(Color.parseColor("#ED755C"));
 
         TextPaint text = new TextPaint(Paint.ANTI_ALIAS_FLAG);
-        text.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/orange juice 2.0.ttf"));
+        text.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/Oswald-Regular.ttf"));
         text.setTextSize(80);
         text.setColor(Color.parseColor("#5D4D53"));
 
@@ -321,7 +321,7 @@ public class MainActivity extends AppCompatActivity implements BeaconConsumer, V
             public void didRangeBeaconsInRegion(Collection<Beacon> beacons, Region region) {
                 if (beacons.size() > 0) {
                     if (start)
-                        if (founded.size() < 6) {
+                        if (founded.size() < 5) {
                             List<Beacon> lijstBeacons = new ArrayList<>(beacons);
                             Collections.sort(lijstBeacons, comparator);
                             if (beacons.size() > 3) {

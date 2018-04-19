@@ -22,7 +22,7 @@ public class EndActivity extends AppCompatActivity {
         long[] time = getIntent().getLongArrayExtra("time");
 
         TextView endText = findViewById(R.id.endText);
-        endText.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/orange juice 2.0.ttf"));
+        endText.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/Oswald-Regular.ttf"));
         endText.setText(String.format("%s%n%s%n%s", "Proficiat!", "Je hebt alle zones ontdekt!",
                 "Je deed er " + time[1] + " uren, " +
                         time[2] + " minuten en " + time[3] + " seconden over."));

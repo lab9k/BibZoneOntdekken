@@ -19,7 +19,7 @@ public class StartActivity extends AppCompatActivity {
         setContentView(R.layout.activity_start);
         TextView tx = findViewById(R.id.introText);
         Button btn = findViewById(R.id.startBtn);
-        Typeface custom_font = Typeface.createFromAsset(getAssets(), "fonts/orange juice 2.0.ttf");
+        Typeface custom_font = Typeface.createFromAsset(getAssets(), "fonts/Oswald-Regular.ttf");
 
         tx.setTypeface(custom_font);
         btn.setTypeface(custom_font);

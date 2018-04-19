@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Ontdek de bib</string>
     <string name="titel">Proficiat</string>
-    <string name="introText">Hallo, ik ben Lotte! \nKom je samen met mij de bib ontdekken?</string>
+    <string name="introText">Hallo, ik ben Lotte! \nGa je mee de bib ontdekken?</string>
     <string name="start"><![CDATA[Start >]]></string>
     <string name="volgende">Volgende</string>
     <string name="close">Start</string>
