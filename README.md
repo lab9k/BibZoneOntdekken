@@ -18,4 +18,4 @@ Als alle zones ontdekt werden, sluit de applicatie af met te vermelden hoe lang 
 ![alt text](https://i.imgur.com/9RIAoxPm.png)
 ![alt text](https://i.imgur.com/PSz80FEm.png)
 ![alt text](https://i.imgur.com/zvHJmXhm.png)
-![alt text](https://i.imgur.com/NZ7VYVEm.png
+![alt text](https://i.imgur.com/NZ7VYVEm.png)
