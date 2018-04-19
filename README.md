@@ -12,10 +12,10 @@ Wanneer je de zone volledig ontdekt hebt krijgt deze een vinkje.
 
 Als alle zones ontdekt werden, sluit de applicatie af met te vermelden hoe lang je erover deed om de kinderbibliotheek te ontdekken. 
 
-![alt text](https://i.imgur.com/INyi6qIm.png “Startscherm”)
-![alt text](https://i.imgur.com/iPoHdflm.png “Uitleg snelheidsmeter”)
-![alt text](https://i.imgur.com/hIByMjZm.png “Uitleg plattegrond”)
-![alt text](https://i.imgur.com/9RIAoxPm.png “Uitleg vuuruitgang”)
-![alt text](https://i.imgur.com/PSz80FEm.png “Begin scherm ”)
-![alt text](https://i.imgur.com/zvHJmXhm.png “Gevorderd scherm”)
-![alt text](https://i.imgur.com/NZ7VYVEm.png “Eindscherm”)
+![alt text](https://i.imgur.com/INyi6qIm.png)
+![alt text](https://i.imgur.com/iPoHdflm.png)
+![alt text](https://i.imgur.com/hIByMjZm.png)
+![alt text](https://i.imgur.com/9RIAoxPm.png)
+![alt text](https://i.imgur.com/PSz80FEm.png)
+![alt text](https://i.imgur.com/zvHJmXhm.png)
+![alt text](https://i.imgur.com/NZ7VYVEm.png
