@@ -281,7 +281,6 @@ public class MainActivity extends AppCompatActivity implements BeaconConsumer, V
                 showcaseView.setContentTitle("Plattegrond");
                 showcaseView.setContentText("Dit is een plattegrond van de bib. Deze plekken moet je gaan ontdekken.");
                 break;
-
             case 1:
                 showcaseView.setShowcase(new ViewTarget(frame), true);
                 showcaseView.setContentTitle("Vooruitgang");
@@ -321,7 +320,7 @@ public class MainActivity extends AppCompatActivity implements BeaconConsumer, V
             public void didRangeBeaconsInRegion(Collection<Beacon> beacons, Region region) {
                 if (beacons.size() > 0) {
                     if (start)
-                        if (founded.size() < 5) {
+                        if (founded.size() < 6) {
                             List<Beacon> lijstBeacons = new ArrayList<>(beacons);
                             Collections.sort(lijstBeacons, comparator);
                             if (beacons.size() > 3) {
@@ -354,7 +353,7 @@ public class MainActivity extends AppCompatActivity implements BeaconConsumer, V
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            Toast.makeText(MainActivity.this, "Geen beacons gevonden", Toast.LENGTH_LONG).show();
+//                            Toast.makeText(MainActivity.this, "Geen beacons gevonden", Toast.LENGTH_LONG).show();
                         }
                     });
                 }
@@ -451,12 +450,8 @@ public class MainActivity extends AppCompatActivity implements BeaconConsumer, V
         long[] time = {elapsedDays, elapsedHours, elapsedMinutes, elapsedSeconds};
         final Intent intent = new Intent(MainActivity.this, EndActivity.class);
         intent.putExtra("time", time);
-        Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
-            public void run() {
-                startActivity(intent);
-            }
-        }, 2000);
+        startActivity(intent);
+
 //        runOnUiThread(new Runnable() {
 //            @Override
 //            public void run() {
