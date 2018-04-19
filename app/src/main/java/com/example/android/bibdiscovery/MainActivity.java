@@ -406,8 +406,8 @@ public class MainActivity extends AppCompatActivity implements BeaconConsumer, V
 //        de opacity wordt aangepast telkens je in deze zone bent met 2, zo wordt hij langzamer zichtbaar
 //        tot wanneer de zone volledig ontdekt is en dus opacity op max staat
         Integer temp = zoneDiscovered.get(tempZone);
-        if (temp <= 90) {
-            temp += 10;
+        if (temp <= 99) {
+            temp += 1;
             zoneDiscovered.put(tempZone, temp);
         } else {
             founded.put(tempZone, centerCheck.get(tempZone));
