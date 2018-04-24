@@ -5,4 +5,6 @@
     <string name="start"><![CDATA[Start >]]></string>
     <string name="volgende">Volgende</string>
     <string name="close">Start</string>
+    <string name="naamText">Voor we beginnen heb ik eerst jouw naam nodig</string>
+    <string name="score"><![CDATA[Scorebord >]]></string>
 </resources>
