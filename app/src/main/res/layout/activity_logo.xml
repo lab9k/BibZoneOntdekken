@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#a8c8b9"
+    android:orientation="horizontal"
+    android:gravity="center"
+    tools:context=".LogoActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/krook"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/krook"/>
+
+        <ImageView
+            android:id="@+id/digipolis"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/lab9k" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/lab9k"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/digipolis" />
+
+        <ImageView
+            android:id="@+id/gent"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/gent" />
+
+    </LinearLayout>
+</LinearLayout>

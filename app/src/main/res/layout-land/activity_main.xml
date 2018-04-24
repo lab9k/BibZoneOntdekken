@@ -7,6 +7,12 @@
     android:background="@drawable/verdiep_min_1_kleur_links"
     android:orientation="vertical">
 
+    <Button
+        android:id="@+id/demoBtn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@android:color/transparent" />
+
     <TextView
         android:id="@+id/plattegrond"
         android:layout_width="250dp"

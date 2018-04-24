@@ -2,6 +2,7 @@ package com.example.android.bibdiscovery;
 
 import android.graphics.Color;
 import android.graphics.Typeface;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
@@ -37,6 +38,10 @@ public class EndActivity extends AppCompatActivity {
                 .addShapes(Shape.RECT, Shape.CIRCLE)
                 .addSizes(new Size(12, 5f))
                 .setPosition(-50f, konfettiView.getWidth() + 50f, -50f, -50f)
-                .stream(300, 5000L);
+                .stream(300, 3000L);
+
+        final MediaPlayer mp = MediaPlayer.create(this, R.raw.winning);
+        mp.start();
+
     }
 }

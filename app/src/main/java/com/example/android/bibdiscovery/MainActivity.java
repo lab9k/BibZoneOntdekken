@@ -2,6 +2,7 @@ package com.example.android.bibdiscovery;
 
 import android.Manifest;
 import android.app.AlertDialog;
+import android.app.Dialog;
 import android.bluetooth.BluetoothAdapter;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -26,6 +27,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -33,6 +35,7 @@ import android.widget.Toast;
 
 import com.example.android.bibdiscovery.utils.CanvasView;
 import com.example.android.bibdiscovery.utils.ShakeListener;
+import com.example.android.bibdiscovery.utils.ViewDialog;
 import com.github.amlcurran.showcaseview.ShowcaseView;
 import com.github.amlcurran.showcaseview.targets.ViewTarget;
 import com.github.anastr.speedviewlib.Speedometer;
@@ -53,6 +56,7 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.charset.MalformedInputException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
@@ -97,12 +101,15 @@ public class MainActivity extends AppCompatActivity implements BeaconConsumer, V
     private RelativeLayout content;
 
     private Animation animShake;
+    private ViewDialog alert;
 
     private String zone = "0";
 
     private ShowcaseView showcaseView;
     private int counter = 0;
     private boolean start = false;
+
+    private Button demoBtn;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -152,6 +159,15 @@ public class MainActivity extends AppCompatActivity implements BeaconConsumer, V
     }
 
     private void setUpView() {
+        //DEMO
+        demoBtn = findViewById(R.id.demoBtn);
+        demoBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                printDifference();
+            }
+        });
+
 //        Uit de view halen
         canvasView = findViewById(R.id.canvas);
         circularProgressBar = findViewById(R.id.progress);
@@ -248,6 +264,8 @@ public class MainActivity extends AppCompatActivity implements BeaconConsumer, V
         params.rightMargin = 500;
         params.bottomMargin = 200;
         frame.setLayoutParams(params);
+
+        alert = new ViewDialog();
     }
 
     private void setUpShowCase() {
@@ -287,9 +305,9 @@ public class MainActivity extends AppCompatActivity implements BeaconConsumer, V
                 showcaseView.setContentText("Dit wiel geeft aan hoeveel je al van een zone ontdekt hebt. \nKan jij alle zones ontdekken?");
                 showcaseView.setButtonText(getString(R.string.close));
                 break;
-            case 3:
-                start = true;
+            case 2:
                 showcaseView.hide();
+                start = true;
                 break;
         }
         counter++;
@@ -415,7 +433,9 @@ public class MainActivity extends AppCompatActivity implements BeaconConsumer, V
                 @Override
                 public void run() {
                     canvasView.setFounded(founded);
-//                    Toast.makeText(MainActivity.this, "Zone " + tempZone + " volledig ontdekt!", Toast.LENGTH_SHORT).show();
+                    alert.showDialog(MainActivity.this,
+                            String.format("%s%n%s", "Proficiat!", "Je heb zone " + tempZone + " volledig ontdekt."),
+                            Color.parseColor(zoneColors.get(Integer.valueOf(tempZone))));
                 }
             });
         }
