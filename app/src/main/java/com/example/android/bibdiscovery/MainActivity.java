@@ -471,6 +471,7 @@ public class MainActivity extends AppCompatActivity implements BeaconConsumer, V
         final Intent intent = new Intent(MainActivity.this, EndActivity.class);
         intent.putExtra("time", time);
         startActivity(intent);
+        finish();
 
 //        runOnUiThread(new Runnable() {
 //            @Override
